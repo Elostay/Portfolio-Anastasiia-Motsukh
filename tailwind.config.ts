@@ -9,10 +9,14 @@ export default {
   theme: {
     extend: {
       colors: {
+        "primary-grey": "#7996A4",
+        "secondary-grey": "#D8D8D8",
+        "primary-milk": "#E9E9E9",
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
     },
   },
+  darkMode: "class",
   plugins: [],
 } satisfies Config;
