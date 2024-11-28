@@ -19,7 +19,7 @@ export default function RootLayout({
       <body className={spaceGroteskRegular.className}>
         <div className="">
           <Header />
-          {/* <main>{children}</main> */}
+          <main>{children}</main>
         </div>
       </body>
     </html>
