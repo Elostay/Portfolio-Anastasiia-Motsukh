@@ -18,14 +18,10 @@
   background-image: url("../images/bg-home-light.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top left;
   height: calc(100vh - 60px);
 }
-@media screen and (max-width: 768px) {
-  .main-bg-light {
-    background-position: top left;
-  }
-}
+
 /*
 sm	640px	@media (min-width: 640px) { ... }
 md	768px	@media (min-width: 768px) { ... }

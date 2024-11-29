@@ -6,7 +6,7 @@ const DarkModeBtn = () => {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
 
   return (
-    <div className="relative hidden md:block">
+    <div className="relative">
       <div className="absolute -top-1 -left-2 w-[45px] h-[45px] z-0 dark:bg-white dark:bg-opacity-100 rounded-full"></div>
       <button
         type="button"

@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "480px",
+      },
       colors: {
         "primary-grey": "#7996A4",
         "secondary-grey": "#D8D8D8",
