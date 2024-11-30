@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description: "Anastasiia Motsukh portfolio",
   icons: {
     icon: [
-      { rel: "icon", type: "image/png", url: "/favicon/favicon-96x96.png" },
-      { rel: "icon", type: "image/svg+xml", url: "/favicon/favicon.svg" },
+      { rel: "icon", type: "image/png", url: "/favicon.ico" },
+      { rel: "icon", type: "image/svg+xml", url: "/icon.svg" },
     ],
-    shortcut: "/favicon/favicon.ico",
-    apple: "/favicon/apple-touch-icon.png",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
-  manifest: "/favicon/site.webmanifest",
+  manifest: "/manifest.webmanifest",
 };
 
 export default function RootLayout({
