@@ -1,31 +1,9 @@
 "use client";
 
 import { CardoRegular } from "@/fonts/fonts";
-import { addProject } from "@/helpers/firebase";
+// import { addProject } from "@/helpers/firebase";
 import clsx from "clsx";
 /*
-
-
-
- const project = {
-    stack: [
-      "NestJS",
-      "Prisma",
-      "Jwt",
-      "Pactum",
-      "Jest",
-      "TypeScript",
-      "Postman",
-    ],
-    githubLink: "https://github.com/Elostay/nestjs-practice",
-    frontend: false,
-    backend: true,
-    practice: true,
-    theBest: false,
-    imageUrl: "/images/nestjs.png",
-  };
-
-
   export interface IProject {
   id?: string;
   stack: string[];
@@ -40,20 +18,20 @@ import clsx from "clsx";
   livePageLink?: string;
 }
 */
-const handleAddProject = async () => {
-  const project = {
-    stack: ["Next.js", "Formik", "TypeScript", "Tailwind CSS"],
-    githubLink: "https://github.com/Elostay/CRM-for-vendors",
-    livePageLink: "https://crm-for-vendors-one.vercel.app/",
-    frontend: true,
-    backend: false,
-    practice: true,
-    theBest: false,
-    imageUrl: "/images/crm-for-vendors.png",
-  };
+// const handleAddProject = async () => {
+//   const project = {
+//     stack: ["JavaScript", "Notiflix", "Axios", "Slim select"],
+//     githubLink: "https://github.com/Elostay/goit-js-hw-10",
+//     livePageLink: "https://elostay.github.io/goit-js-hw-10/",
+//     frontend: false,
+//     backend: false,
+//     practice: true,
+//     theBest: false,
+//     imageUrl: "/images/cat-finder.png",
+//   };
 
-  await addProject(project);
-};
+//   await addProject(project);
+// };
 
 export default function Home() {
   return (
@@ -73,9 +51,9 @@ export default function Home() {
             <h2 className="text-2xl xs:text-3xl md:text-4xl lg:text-5xl">
               Frontend Developer
             </h2>
-            <button type="button" onClick={handleAddProject}>
+            {/* <button type="button" onClick={handleAddProject}>
               add project
-            </button>
+            </button> */}
           </div>
         </div>
       </div>

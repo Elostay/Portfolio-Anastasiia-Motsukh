@@ -3,11 +3,12 @@
 import { fetchProjects } from "@/helpers/firebase";
 import { IProject } from "@/interfaces/Ifirebase";
 import { useEffect, useState } from "react";
-import ProjectItem from "../components/ProjectItem";
+import ProjectList from "../components/ProjectList";
+import ScrollToTopButton from "../components/ScrollToTopButton";
 
 const Projects = () => {
   const [theBestProjects, setTheBestProjects] = useState<IProject[]>([]);
-  const [frontendProjects, setFrontendProjects] = useState<IProject[]>([]);
+
   const [backendProjects, setBackendProjects] = useState<IProject[]>([]);
   const [practiceProjects, setPracticeProjects] = useState<IProject[]>([]);
   const [teamProjects, setTeamProjects] = useState<IProject[]>([]);
@@ -15,16 +16,14 @@ const Projects = () => {
   useEffect(() => {
     const getProjects = async () => {
       const data = await fetchProjects();
-      console.log("💖 ~ handleFetchProjects ~ data:", data);
 
       const theBest = data.filter((project) => project.theBest === true);
-      const frontend = data.filter((project) => project.frontend === true);
       const backend = data.filter((project) => project.backend === true);
       const practice = data.filter((project) => project.practice === true);
       const team = data.filter((project) => project.team === true);
 
       setTheBestProjects(theBest);
-      setFrontendProjects(frontend);
+
       setBackendProjects(backend);
       setPracticeProjects(practice);
       setTeamProjects(team);
@@ -33,65 +32,35 @@ const Projects = () => {
   }, []);
 
   return (
-    <section className="py-10">
-      <div className="container mx-auto px-4">
-        <div>
-          <h1 className="text-center font-semibold text-3xl mb-10">
-            The best projects
+    <section className="py-10 relative">
+      <div className="absolute inset-0 dark:bg-black dark:bg-opacity-40 "></div>
+      <div className="relative container mx-auto px-4">
+        <div className="pb-5 ">
+          <h1 className="text-center font-semibold text-3xl mb-10 ">
+            The best projects ✨
           </h1>
-          <ul>
-            {theBestProjects.map((project) => (
-              <ProjectItem
-                key={project.id}
-                id={project.id!}
-                livePageLink={project.livePageLink}
-                githubLink={project.githubLink}
-                stack={project.stack}
-                imageUrl={project.imageUrl}
-              />
-            ))}
-          </ul>
+          <ProjectList projects={theBestProjects} />
         </div>
-        <h2 className="text-center font-semibold text-3xl mb-10">Frontend</h2>
-        <ul>
-          {frontendProjects.map((project) => (
-            <ProjectItem
-              key={project.id}
-              id={project.id!}
-              livePageLink={project.livePageLink}
-              githubLink={project.githubLink}
-              stack={project.stack}
-              imageUrl={project.imageUrl}
-            />
-          ))}
-        </ul>
-        <h2 className="text-center font-semibold text-3xl mb-10">Practice</h2>
-        <ul>
-          {practiceProjects.map((project) => (
-            <ProjectItem
-              key={project.id}
-              id={project.id!}
-              livePageLink={project.livePageLink}
-              githubLink={project.githubLink}
-              stack={project.stack}
-              imageUrl={project.imageUrl}
-            />
-          ))}
-        </ul>
-        <h2 className="text-center font-semibold text-3xl mb-10">Backend</h2>
-        <ul>
-          {backendProjects.map((project) => (
-            <ProjectItem
-              key={project.id}
-              id={project.id!}
-              livePageLink={project.livePageLink}
-              githubLink={project.githubLink}
-              stack={project.stack}
-              imageUrl={project.imageUrl}
-            />
-          ))}
-        </ul>
+
+        <div className="py-5">
+          <h2 className="text-center font-semibold text-3xl mb-10">
+            Frontend practice
+          </h2>
+          <ProjectList projects={practiceProjects} />
+        </div>
+        <div className="py-5">
+          <h2 className="text-center font-semibold text-3xl mb-10">
+            Backend practice
+          </h2>
+          <ProjectList projects={backendProjects} />
+        </div>
+        <div className="py-5">
+          <h2 className="text-center font-semibold text-3xl mb-10">Team</h2>
+
+          <ProjectList projects={teamProjects} />
+        </div>
       </div>
+      <ScrollToTopButton />
     </section>
   );
 };
