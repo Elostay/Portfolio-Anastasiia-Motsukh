@@ -18,10 +18,14 @@ const ProjectItem: FC<ProjectItemProps> = ({
 }) => {
   return (
     <li
-      className="w-[300px] overflow-hidden flex flex-col h-full border-2 rounded-2xl  dark:bg-white dark:bg-opacity-80 "
+      className="w-[300px] overflow-hidden flex flex-col h-full border-2 rounded-2xl  "
       key={id}
     >
-      <a target="_blank" href={livePageLink}>
+      <a
+        target="_blank"
+        href={livePageLink ? livePageLink : githubLink}
+        onClick={() => console.log(githubLink)}
+      >
         <Image
           className="w-full h-[170px] object-cover"
           width={300}

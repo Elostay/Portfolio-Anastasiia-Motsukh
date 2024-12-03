@@ -22,6 +22,65 @@
   height: calc(100vh - 60px);
 }
 
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f5f0ea;
+  border-radius: 10px;
+}
+
+.list-with-dots {
+  list-style: inside;
+}
+.download-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #086d0e;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.download-button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.5s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+}
+
+.download-button:hover {
+  background-color: #286d08;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+}
+
+.download-button:hover::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.download-button:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
 /*
 sm	640px	@media (min-width: 640px) { ... }
 md	768px	@media (min-width: 768px) { ... }

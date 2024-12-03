@@ -50,7 +50,7 @@ const Projects = () => {
         </div>
       ) : (
         <div>
-          <div className="absolute inset-0 dark:bg-black dark:bg-opacity-40 "></div>
+          <div className="absolute inset-0 "></div>
           <div className="relative container mx-auto px-4">
             <div className="pb-5 ">
               <h1 className="text-center font-semibold text-3xl mb-10 ">

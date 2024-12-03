@@ -1,6 +1,6 @@
 "use client";
 
-import { CardoRegular } from "@/fonts/fonts";
+import { cardoRegular } from "@/fonts/fonts";
 // import { addProject } from "@/helpers/firebase";
 import clsx from "clsx";
 /*
@@ -37,27 +37,34 @@ export default function Home() {
   return (
     <section>
       <div className="relative main-bg-light ">
-        <div className="absolute inset-0 dark:bg-black dark:bg-opacity-40 "></div>
+        <div className="absolute inset-0 "></div>
         <div className="container mx-auto px-4  flex items-center justify-center min-h-[calc(100vh-68px)]">
           <div
             className={clsx(
-              "p-8 backdrop-blur-md rounded-3xl dark:bg-white dark:bg-opacity-80  w-[300px] xs:w-[480px] md:w-[768px] lg:w-[1024px]",
-              CardoRegular.className
+              "p-8 backdrop-blur-md rounded-3xl   w-[300px] xs:w-[480px] md:w-[768px] lg:w-[1024px]",
+              cardoRegular.className
             )}
           >
             <h1 className="border-b border-black pb-2 mb-2 text-3xl xs:text-5xl md:text-7xl  lg:text-8xl font-semibold whitespace-nowrap">
               Anastasiia Motsukh
             </h1>
-            <h2 className="text-2xl xs:text-3xl md:text-4xl lg:text-5xl">
+            <h2 className="text-2xl xs:text-3xl md:text-4xl lg:text-5xl mb-10">
               Frontend Developer
             </h2>
+            <a
+              href="/Anastasiia_Motsukh_fullstack.pdf"
+              download="Anastasiia_Motsukh_fullstack"
+              className="download-button"
+            >
+              Download CV
+            </a>
             {/* <button type="button" onClick={handleAddProject}>
               add project
             </button> */}
           </div>
         </div>
       </div>
-      <div>
+      {/* <div>
         I have practical experience as a front-end developer and strive to write
         clean, efficient, and maintainable code. I am an adaptable and flexible
         individual with a primary focus on personal development. I gain
@@ -65,7 +72,7 @@ export default function Home() {
         in witnessing the tangible outcomes of my efforts. My goal is continuous
         growth, working on engaging projects, and collaborating with inspiring
         people.
-      </div>
+      </div> */}
     </section>
   );
 }

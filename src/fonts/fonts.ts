@@ -1,7 +1,7 @@
 import { Cardo, Dancing_Script } from "next/font/google";
 import { Space_Grotesk } from "next/font/google";
 
-export const CardoRegular = Cardo({
+export const cardoRegular = Cardo({
   weight: "400",
   subsets: ["latin"],
   display: "swap",
