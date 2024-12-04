@@ -1,8 +1,10 @@
 "use client";
 
+import "animate.css";
 import { cardoRegular } from "@/fonts/fonts";
 // import { addProject } from "@/helpers/firebase";
 import clsx from "clsx";
+import Image from "next/image";
 /*
   export interface IProject {
   id?: string;
@@ -35,44 +37,68 @@ import clsx from "clsx";
 
 export default function Home() {
   return (
-    <section>
-      <div className="relative main-bg-light ">
-        <div className="absolute inset-0 "></div>
-        <div className="container mx-auto px-4  flex items-center justify-center min-h-[calc(100vh-68px)]">
-          <div
-            className={clsx(
-              "p-8 backdrop-blur-md rounded-3xl   w-[300px] xs:w-[480px] md:w-[768px] lg:w-[1024px]",
-              cardoRegular.className
-            )}
-          >
-            <h1 className="border-b border-black pb-2 mb-2 text-3xl xs:text-5xl md:text-7xl  lg:text-8xl font-semibold whitespace-nowrap">
-              Anastasiia Motsukh
-            </h1>
-            <h2 className="text-2xl xs:text-3xl md:text-4xl lg:text-5xl mb-10">
-              Frontend Developer
-            </h2>
-            <a
-              href="/Anastasiia_Motsukh_fullstack.pdf"
-              download="Anastasiia_Motsukh_fullstack"
-              className="download-button"
+    <section className="relative">
+      <div className="relative main-bg">
+        <div className="container mx-auto px-4  flex  min-h-[calc(100vh-68px)] gap-10">
+          <div className="flex items-center gap-[50px] w-full">
+            <div
+              style={{ animationIterationCount: 1 }}
+              className="hidden md:block md:w-[350px] md:h-[350px] lg:w-[400px] lg:h-[400px] xl:w-[500px] xl:h-[500px] 2xl:w-[600px] 2xl:h-[600px] shrink-0 animate__animated animate__bounceInDown"
             >
-              Download CV
-            </a>
-            {/* <button type="button" onClick={handleAddProject}>
-              add project
-            </button> */}
+              <Image
+                className="w-full h-full "
+                src="/images/me.png"
+                width={300}
+                height={300}
+                quality={100}
+                layout="responsive"
+                alt="Anastasiia's photo"
+              />
+            </div>
+            <div className="overflow-hidden">
+              <div
+                className="w-full animate__animated animate__bounceInRight"
+                style={{ animationIterationCount: 1 }}
+              >
+                <div className={clsx("p-8 b rounded-3xl ")}>
+                  <div className={clsx("", cardoRegular.className)}>
+                    <h1 className="border-b border-black pb-2 mb-4 text-4xl sm:text-6xl md:text-3xl lg:text-5xl xl:text-7xl font-semibold ">
+                      Anastasiia Motsukh
+                    </h1>
+                    <h2 className="text-2xl sm:text-3xl md:text-xl lg:text-3xl xl:text-5xl mb-10">
+                      &lt;frontend developer/&gt;
+                    </h2>
+                  </div>
+                  <div className="w-full">
+                    <div className="mb-10 text-lg xl:text-xl ">
+                      I have practical experience as a front-end developer and
+                      strive to write clean, efficient, and maintainable code. I
+                      am an adaptable and flexible individual with a primary
+                      focus on personal development. My goal is continuous
+                      growth, working on engaging projects, and collaborating
+                      with inspiring people.
+                    </div>
+                    <a
+                      href="/Anastasiia_Motsukh_frontend.pdf"
+                      download="Anastasiia_Motsukh_frontend"
+                      className={clsx(
+                        "download-button",
+                        cardoRegular.className
+                      )}
+                    >
+                      Download CV
+                    </a>
+                  </div>
+
+                  {/* <button type="button" onClick={handleAddProject}>
+	              add project
+	            </button> */}
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      {/* <div>
-        I have practical experience as a front-end developer and strive to write
-        clean, efficient, and maintainable code. I am an adaptable and flexible
-        individual with a primary focus on personal development. I gain
-        satisfaction from the process of continual learning and find inspiration
-        in witnessing the tangible outcomes of my efforts. My goal is continuous
-        growth, working on engaging projects, and collaborating with inspiring
-        people.
-      </div> */}
     </section>
   );
 }
