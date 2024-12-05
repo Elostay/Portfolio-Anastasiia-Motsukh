@@ -29,7 +29,7 @@ export default function RootLayout({
       <body
         className={clsx(
           spaceGroteskRegular.className,
-          "min-h-screen flex flex-col"
+          "min-h-screen flex flex-col bg-[#fef9e6]"
         )}
       >
         <Header />

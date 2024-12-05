@@ -11,7 +11,7 @@ const Header = () => {
   const pathname = usePathname();
 
   return (
-    <header className="h-[60px]  p-4 bg-primary-grey text-white">
+    <header className="h-[60px]  p-4 bg-[#ebcca0] text-white">
       <div className="container mx-auto  flex items-center justify-between">
         <Link
           href="/"

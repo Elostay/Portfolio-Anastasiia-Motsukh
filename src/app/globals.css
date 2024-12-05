@@ -14,19 +14,6 @@
 	}
 }
 
-::-webkit-scrollbar {
-	width: 15px;
-}
-
-::-webkit-scrollbar-track {
-	border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-	background: #f5f0ea;
-	border-radius: 10px;
-}
-
 .list-with-dots {
 	list-style: inside;
 }
@@ -80,4 +67,30 @@
 	background-repeat: no-repeat;
 	background-position: top left;
 	height: calc(100vh - 60px);
+}
+
+.marquee {
+	overflow: hidden;
+	white-space: nowrap;
+	box-sizing: border-box;
+	width: 100%;
+	background: #ebcca0;
+	color: white;
+	padding: 10px 0;
+}
+
+.marquee-content {
+	display: inline-block;
+	animation: marquee 10s linear infinite;
+}
+.custom-spacing {
+	word-spacing: 10rem;
+}
+@keyframes marquee {
+	0% {
+		transform: translateX(100%);
+	}
+	100% {
+		transform: translateX(-100%);
+	}
 }

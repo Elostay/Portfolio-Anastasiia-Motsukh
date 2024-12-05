@@ -18,7 +18,7 @@ const ProjectItem: FC<ProjectItemProps> = ({
 }) => {
   return (
     <li
-      className="w-[300px] overflow-hidden flex flex-col h-full border-2 rounded-2xl  "
+      className="w-[300px] overflow-hidden flex flex-col h-full border-2 border-[#ebcca0] rounded-2xl  "
       key={id}
     >
       <a

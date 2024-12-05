@@ -54,7 +54,7 @@ const Projects = () => {
           <div className="relative container mx-auto px-4">
             <div className="pb-5 ">
               <h1 className="text-center font-semibold text-3xl mb-10 ">
-                Best projects
+                Projects
               </h1>
               <ProjectList projects={theBestProjects} />
             </div>
@@ -72,7 +72,9 @@ const Projects = () => {
               <ProjectList projects={backendProjects} />
             </div>
             <div className="py-5">
-              <h2 className="text-center font-semibold text-3xl mb-10">Team</h2>
+              <h2 className="text-center font-semibold text-3xl mb-10">
+                Team projects
+              </h2>
 
               <ProjectList projects={teamProjects} />
             </div>

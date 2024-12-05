@@ -48,10 +48,8 @@ export default function Home() {
               <Image
                 className="w-full h-full "
                 src="/images/me.png"
-                width={300}
-                height={300}
                 quality={100}
-                layout="responsive"
+                fill
                 alt="Anastasiia's photo"
               />
             </div>
@@ -96,6 +94,11 @@ export default function Home() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+        <div className="hidden sm:block marquee absolute bottom-16 left-0">
+          <div className="marquee-content text-3xl lg:text-5xl custom-spacing">
+            React Redux Next.js Typescript TailwindCSS MUI
           </div>
         </div>
       </div>
