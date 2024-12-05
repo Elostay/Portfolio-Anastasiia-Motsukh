@@ -2,7 +2,7 @@
 
 import "animate.css";
 import { cardoRegular } from "@/fonts/fonts";
-import { addProject } from "@/helpers/firebase";
+// import { addProject } from "@/helpers/firebase";
 import clsx from "clsx";
 import Image from "next/image";
 /*
@@ -21,19 +21,19 @@ import Image from "next/image";
 }
 */
 
-const handleAddProject = async () => {
-  const project = {
-    stack: ["GraphQL", "Apollo Server"],
-    githubLink: "https://github.com/Elostay/graphql-practice",
-    frontend: false,
-    backend: false,
-    practice: true,
-    theBest: false,
-    imageUrl: "/images/graphql.png",
-  };
+// const handleAddProject = async () => {
+//   const project = {
+//     stack: ["GraphQL", "Apollo Server"],
+//     githubLink: "https://github.com/Elostay/graphql-practice",
+//     frontend: false,
+//     backend: false,
+//     practice: true,
+//     theBest: false,
+//     imageUrl: "/images/graphql.png",
+//   };
 
-  await addProject(project);
-};
+//   await addProject(project);
+// };
 
 export default function Home() {
   return (
@@ -88,9 +88,9 @@ export default function Home() {
                     </a>
                   </div>
 
-                  <button type="button" onClick={handleAddProject}>
+                  {/* <button type="button" onClick={handleAddProject}>
                     add project
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>

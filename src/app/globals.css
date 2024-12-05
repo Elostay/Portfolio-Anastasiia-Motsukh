@@ -3,94 +3,94 @@
 @tailwind utilities;
 
 :root {
-	--background: #ffffff;
-	--foreground: #171717;
+  --background: #ffffff;
+  --foreground: #171717;
 }
 
 @media (prefers-color-scheme: dark) {
-	:root {
-		--background: #0a0a0a;
-		--foreground: #ededed;
-	}
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
 }
 
 .list-with-dots {
-	list-style: inside;
+  list-style: inside;
 }
 
 .download-button {
-	display: inline-block;
-	padding: 12px 24px;
-	background-color: #086d0e;
-	color: white;
-	font-size: 16px;
-	font-weight: bold;
-	text-transform: uppercase;
-	text-decoration: none;
-	border-radius: 50px;
-	position: relative;
-	overflow: hidden;
-	transition: all 0.4s ease;
-	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: #086d0e;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .download-button::before {
-	content: "";
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 300%;
-	height: 300%;
-	background-color: rgba(255, 255, 255, 0.2);
-	transition: all 0.5s ease;
-	border-radius: 50%;
-	transform: translate(-50%, -50%) scale(0);
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300%;
+  height: 300%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.5s ease;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
 }
 
 .download-button:hover {
-	background-color: #286d08;
-	box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+  background-color: #286d08;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
 }
 
 .download-button:hover::before {
-	transform: translate(-50%, -50%) scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 
 .download-button:active {
-	transform: translateY(4px);
-	box-shadow: none;
+  transform: translateY(4px);
+  box-shadow: none;
 }
 
 .main-bg {
-	background-image: url("/images/bg-home.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: top left;
-	height: calc(100vh - 60px);
+  background-image: url("/images/bg-home.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
+  height: calc(100vh - 60px);
 }
 
 .marquee {
-	overflow: hidden;
-	white-space: nowrap;
-	box-sizing: border-box;
-	width: 100%;
-	background: #ebcca0;
-	color: white;
-	padding: 10px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  width: 100%;
+  background: #ebcca0;
+  color: white;
+  padding: 10px 0;
 }
 
 .marquee-content {
-	display: inline-block;
-	animation: marquee 10s linear infinite;
+  display: inline-block;
+  animation: marquee 10s linear infinite;
 }
 .custom-spacing {
-	word-spacing: 10rem;
+  word-spacing: 10rem;
 }
 @keyframes marquee {
-	0% {
-		transform: translateX(100%);
-	}
-	100% {
-		transform: translateX(-100%);
-	}
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
 }
