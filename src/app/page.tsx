@@ -2,7 +2,7 @@
 
 import "animate.css";
 import { cardoRegular } from "@/fonts/fonts";
-// import { addProject } from "@/helpers/firebase";
+import { addProject } from "@/helpers/firebase";
 import clsx from "clsx";
 import Image from "next/image";
 /*
@@ -20,20 +20,20 @@ import Image from "next/image";
   livePageLink?: string;
 }
 */
-// const handleAddProject = async () => {
-//   const project = {
-//     stack: ["JavaScript", "Notiflix", "Axios", "Slim select"],
-//     githubLink: "https://github.com/Elostay/goit-js-hw-10",
-//     livePageLink: "https://elostay.github.io/goit-js-hw-10/",
-//     frontend: false,
-//     backend: false,
-//     practice: true,
-//     theBest: false,
-//     imageUrl: "/images/cat-finder.png",
-//   };
 
-//   await addProject(project);
-// };
+const handleAddProject = async () => {
+  const project = {
+    stack: ["GraphQL", "Apollo Server"],
+    githubLink: "https://github.com/Elostay/graphql-practice",
+    frontend: false,
+    backend: false,
+    practice: true,
+    theBest: false,
+    imageUrl: "/images/graphql.png",
+  };
+
+  await addProject(project);
+};
 
 export default function Home() {
   return (
@@ -88,9 +88,9 @@ export default function Home() {
                     </a>
                   </div>
 
-                  {/* <button type="button" onClick={handleAddProject}>
-	              add project
-	            </button> */}
+                  <button type="button" onClick={handleAddProject}>
+                    add project
+                  </button>
                 </div>
               </div>
             </div>
