@@ -2,38 +2,39 @@
 
 import "animate.css";
 import { cardoRegular } from "@/fonts/fonts";
-// import { addProject } from "@/helpers/firebase";
 import clsx from "clsx";
 import Image from "next/image";
 /*
-  export interface IProject {
-  id?: string;
-  stack: string[];
-  githubLink: string;
-  frontend: boolean;
-  backend: boolean;
-  practice: boolean;
-  theBest: boolean;
-  imageUrl: string;
+export interface IProject {
+	id?: string;
+	stack: string[];
+	githubLink: string;
+	frontend: boolean;
+	backend: boolean;
+	practice: boolean;
+	theBest: boolean;
+	imageUrl: string;
    role?: string;
-  team?: boolean;
-  livePageLink?: string;
-}
-*/
+	team?: boolean;
+	livePageLink?: string;
+	}
+	*/
 
-// const handleAddProject = async () => {
-//   const project = {
-//     stack: ["GraphQL", "Apollo Server"],
-//     githubLink: "https://github.com/Elostay/graphql-practice",
-//     frontend: false,
-//     backend: false,
-//     practice: true,
-//     theBest: false,
-//     imageUrl: "/images/graphql.png",
-//   };
+import { addProject } from "@/helpers/firebase";
+const handleAddProject = async () => {
+  const project = {
+    stack: ["GraphQL", "Apollo"],
+    githubLink: "https://github.com/Elostay/catstronauts",
+    livePageLink: "https://elostay.github.io/catstronauts/",
+    frontend: false,
+    backend: false,
+    practice: true,
+    theBest: false,
+    imageUrl: "/images/catstronauts.png",
+  };
 
-//   await addProject(project);
-// };
+  await addProject(project);
+};
 
 export default function Home() {
   return (
@@ -88,9 +89,9 @@ export default function Home() {
                     </a>
                   </div>
 
-                  {/* <button type="button" onClick={handleAddProject}>
+                  <button type="button" onClick={handleAddProject}>
                     add project
-                  </button> */}
+                  </button>
                 </div>
               </div>
             </div>
