@@ -20,21 +20,21 @@ export interface IProject {
 	}
 	*/
 
-import { addProject } from "@/helpers/firebase";
-const handleAddProject = async () => {
-  const project = {
-    stack: ["GraphQL", "Apollo"],
-    githubLink: "https://github.com/Elostay/catstronauts",
-    livePageLink: "https://elostay.github.io/catstronauts/",
-    frontend: false,
-    backend: false,
-    practice: true,
-    theBest: false,
-    imageUrl: "/images/catstronauts.png",
-  };
+// import { addProject } from "@/helpers/firebase";
+// const handleAddProject = async () => {
+//   const project = {
+//     stack: ["GraphQL", "Apollo"],
+//     githubLink: "https://github.com/Elostay/catstronauts",
+//     livePageLink: "https://elostay.github.io/catstronauts/",
+//     frontend: false,
+//     backend: false,
+//     practice: true,
+//     theBest: false,
+//     imageUrl: "/images/catstronauts.png",
+//   };
 
-  await addProject(project);
-};
+//   await addProject(project);
+// };
 
 export default function Home() {
   return (
@@ -89,9 +89,9 @@ export default function Home() {
                     </a>
                   </div>
 
-                  <button type="button" onClick={handleAddProject}>
+                  {/* <button type="button" onClick={handleAddProject}>
                     add project
-                  </button>
+                  </button> */}
                 </div>
               </div>
             </div>
