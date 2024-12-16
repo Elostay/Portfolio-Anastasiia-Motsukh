@@ -40,23 +40,19 @@ const HamburgerMenu = () => {
       </button>
 
       <div
-        className={`fixed top-0 left-0 w-full h-full bg-secondary-grey text-black  z-40 transform transition-all duration-300 ${
+        className={`fixed top-0 left-0 w-full h-full bg-[#ebcca0] text-white  z-40 transform transition-all duration-300 ${
           isBurgerOpen
             ? "opacity-100 translate-x-0"
             : "opacity-0 translate-x-full"
         }`}
       >
-        <ul className="flex flex-col gap-5 items-center justify-center h-full">
+        <ul className="flex flex-col gap-8 items-center justify-center h-full text-xl">
           <li>
             <Link href="/" onClick={closeBurger}>
               Home
             </Link>
           </li>
-          <li>
-            <Link href="/about" onClick={closeBurger}>
-              About
-            </Link>
-          </li>
+
           <li>
             <Link href="/resume" onClick={closeBurger}>
               Resume
@@ -65,11 +61,6 @@ const HamburgerMenu = () => {
           <li>
             <Link href="/projects" onClick={closeBurger}>
               Projects
-            </Link>
-          </li>
-          <li>
-            <Link href="/contacts" onClick={closeBurger}>
-              Contacts
             </Link>
           </li>
         </ul>
