@@ -19,7 +19,7 @@ const Resume = () => {
             <p className=" text-xl font-semibold xl:font-normal md:text-2xl xl:text-4xl mb-2">
               Anastasiia Motsukh
             </p>
-            <p className="text-sm md:text-lg xl:text-xl">Frontend developer</p>
+            <p className="text-sm md:text-lg xl:text-xl">Fullstack developer</p>
           </div>
           <div className=" mt-10">
             <div className="flex flex-col gap-10">
@@ -144,8 +144,8 @@ const Resume = () => {
                 <p className="text-xl font-semibold mb-4">Backend</p>
                 <ul className="list-with-dots flex flex-col gap-3 text-lg">
                   <li>Node.js</li>
+                  <li>Express.js</li>
                   <li>Nest.js</li>
-                  <li>Express</li>
                   <li>Mongoose</li>
                   <li>MongoDB</li>
                   <li>JWT</li>

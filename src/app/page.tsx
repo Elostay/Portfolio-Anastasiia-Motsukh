@@ -65,12 +65,12 @@ export default function Home() {
                       Anastasiia Motsukh
                     </h1>
                     <h2 className="text-2xl sm:text-3xl md:text-xl lg:text-3xl xl:text-5xl mb-10">
-                      &lt;frontend developer/&gt;
+                      &lt;Fullstack developer/&gt;
                     </h2>
                   </div>
                   <div className="w-full">
                     <div className="mb-10 text-lg xl:text-xl ">
-                      I have practical experience as a front-end developer and
+                      I have practical experience as a fullstack developer and
                       strive to write clean, efficient, and maintainable code. I
                       am an adaptable and flexible individual with a primary
                       focus on personal development. My goal is continuous
@@ -99,7 +99,7 @@ export default function Home() {
         </div>
         <div className="hidden sm:block marquee absolute bottom-16 left-0">
           <div className="marquee-content text-3xl lg:text-5xl custom-spacing">
-            React Redux Next.js Typescript TailwindCSS MUI
+            React Redux Next.js Typescript TailwindCSS MUI Node.js Express.js
           </div>
         </div>
       </div>
